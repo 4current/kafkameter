@@ -67,7 +67,7 @@ public class LoadGenerator extends ConfigTestElement implements TestBean, LoopIt
       ).getConstructor(String.class).newInstance(config);
     } catch (Exception e) {
       log.fatalError("Exception initializing Load Generator class: " + className, e);
-      throw Throwables.propagate(e);
+      throw new RuntimeException(e);
     }
   }
 

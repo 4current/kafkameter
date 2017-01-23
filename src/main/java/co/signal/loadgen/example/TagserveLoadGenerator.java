@@ -133,7 +133,7 @@ public class TagserveLoadGenerator implements SyntheticLoadGenerator {
       return gson.fromJson(config, SITE_CONFIGS_TYPE);
     } catch (JsonParseException e) {
       log.fatalError("Problem parsing json from config:\n" + config, e);
-      throw Throwables.propagate(e);
+      throw new RuntimeException(e);
     }
   }
 }

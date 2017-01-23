@@ -19,6 +19,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 import com.google.common.base.Objects;
+import com.google.common.base.MoreObjects;
 
 /**
 * @author codyaray
@@ -43,7 +44,7 @@ class SiteConfig {
 
   @Override
   public String toString() {
-    return Objects.toStringHelper(this)
+    return MoreObjects.toStringHelper(this)
         .add("weight", weight)
         .add("pages", pages)
         .toString();

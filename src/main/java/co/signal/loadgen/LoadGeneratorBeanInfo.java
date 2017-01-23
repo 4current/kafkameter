@@ -74,7 +74,7 @@ public class LoadGeneratorBeanInfo extends BeanInfoSupport {
           JMeterUtils.getSearchPaths(), new Class[] { SyntheticLoadGenerator.class });
     } catch (IOException e) {
       log.fatalError("Exception finding SyntheticLoadGenerator implementations", e);
-      throw Throwables.propagate(e);
+      throw new RuntimeException(e);
     }
   }
 }
